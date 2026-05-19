@@ -12,6 +12,7 @@ Personal fork notes:
 - See examples/ directory for sample rubrics tailored to social science research
 - Added DEFAULT_CITATION_STYLE = "APA" since all my students use APA 7th edition
 - Added DEFAULT_FEEDBACK_VERBOSITY = "detailed" so students get thorough explanations
+- Set DEFAULT_MAX_FEEDBACK_ITEMS = 5 to avoid overwhelming students with too many notes at once
 """
 
 __version__ = "0.1.0"
@@ -24,6 +25,9 @@ DEFAULT_CITATION_STYLE = "APA"
 # Undergrads benefit from detailed feedback rather than terse summaries
 DEFAULT_FEEDBACK_VERBOSITY = "detailed"
 
+# Cap feedback items per section so students aren't overwhelmed; they can request more manually
+DEFAULT_MAX_FEEDBACK_ITEMS = 5
+
 from academic_research_skills.core.evaluator import ResearchSkillsEvaluator
 from academic_research_skills.core.feedback import FeedbackGenerator
 from academic_research_skills.core.rubric import ResearchRubric
@@ -34,5 +38,6 @@ __all__ = [
     "ResearchRubric",
     "DEFAULT_CITATION_STYLE",
     "DEFAULT_FEEDBACK_VERBOSITY",
+    "DEFAULT_MAX_FEEDBACK_ITEMS",
     "__version__",
 ]
