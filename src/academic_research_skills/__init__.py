@@ -1,3 +1,4 @@
+```
 """
 academic-research-skills: A toolkit for developing and assessing academic research competencies.
 
@@ -7,6 +8,10 @@ This package provides tools for:
 - Checking citation and reference formatting
 - Analyzing argument structure and logical coherence
 - Providing feedback on research methodology
+
+Personal fork notes:
+- Using this package to help evaluate undergraduate thesis drafts
+- See examples/ directory for sample rubrics tailored to social science research
 """
 
 __version__ = "0.1.0"
@@ -23,3 +28,4 @@ __all__ = [
     "ResearchRubric",
     "__version__",
 ]
+```
