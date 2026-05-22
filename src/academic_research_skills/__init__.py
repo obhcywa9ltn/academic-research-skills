@@ -13,6 +13,7 @@ Personal fork notes:
 - Added DEFAULT_CITATION_STYLE = "APA" since all my students use APA 7th edition
 - Added DEFAULT_FEEDBACK_VERBOSITY = "detailed" so students get thorough explanations
 - Set DEFAULT_MAX_FEEDBACK_ITEMS = 5 to avoid overwhelming students with too many notes at once
+- Increased DEFAULT_MAX_FEEDBACK_ITEMS to 7 for senior thesis students who need more granular feedback
 """
 
 __version__ = "0.1.0"
@@ -25,8 +26,9 @@ DEFAULT_CITATION_STYLE = "APA"
 # Undergrads benefit from detailed feedback rather than terse summaries
 DEFAULT_FEEDBACK_VERBOSITY = "detailed"
 
-# Cap feedback items per section so students aren't overwhelmed; they can request more manually
-DEFAULT_MAX_FEEDBACK_ITEMS = 5
+# Raised from 5 to 7 — senior thesis students can handle more feedback points per section
+# and their drafts tend to have more nuanced issues worth flagging individually
+DEFAULT_MAX_FEEDBACK_ITEMS = 7
 
 from academic_research_skills.core.evaluator import ResearchSkillsEvaluator
 from academic_research_skills.core.feedback import FeedbackGenerator
