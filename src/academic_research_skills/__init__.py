@@ -16,6 +16,7 @@ Personal fork notes:
 - Increased DEFAULT_MAX_FEEDBACK_ITEMS to 7 for senior thesis students who need more granular feedback
 - Added DEFAULT_LANGUAGE = "en" for explicit language tagging in feedback output
 - Added DEFAULT_RUBRIC_SECTION_WEIGHTS for my standard thesis grading breakdown
+- Adjusted literature_review and argument_structure weights to better reflect capstone rubric
 """
 
 __version__ = "0.1.0"
@@ -37,11 +38,13 @@ DEFAULT_LANGUAGE = "en"
 
 # Weighting for each thesis section in my standard undergraduate rubric.
 # Reflects the emphasis I place on argument and methodology over formatting.
+# Updated: bumped argument_structure from 0.20 -> 0.25 and trimmed literature_review
+# from 0.25 -> 0.20 to better match the capstone course's grading criteria.
 DEFAULT_RUBRIC_SECTION_WEIGHTS = {
     "research_question": 0.20,
-    "literature_review": 0.25,
+    "literature_review": 0.20,
     "methodology": 0.25,
-    "argument_structure": 0.20,
+    "argument_structure": 0.25,
     "citations": 0.10,
 }
 
