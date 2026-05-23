@@ -15,6 +15,7 @@ Personal fork notes:
 - Set DEFAULT_MAX_FEEDBACK_ITEMS = 5 to avoid overwhelming students with too many notes at once
 - Increased DEFAULT_MAX_FEEDBACK_ITEMS to 7 for senior thesis students who need more granular feedback
 - Added DEFAULT_LANGUAGE = "en" for explicit language tagging in feedback output
+- Added DEFAULT_RUBRIC_SECTION_WEIGHTS for my standard thesis grading breakdown
 """
 
 __version__ = "0.1.0"
@@ -34,6 +35,16 @@ DEFAULT_MAX_FEEDBACK_ITEMS = 7
 # Explicitly set language to English; useful if multilingual support is added later
 DEFAULT_LANGUAGE = "en"
 
+# Weighting for each thesis section in my standard undergraduate rubric.
+# Reflects the emphasis I place on argument and methodology over formatting.
+DEFAULT_RUBRIC_SECTION_WEIGHTS = {
+    "research_question": 0.20,
+    "literature_review": 0.25,
+    "methodology": 0.25,
+    "argument_structure": 0.20,
+    "citations": 0.10,
+}
+
 from academic_research_skills.core.evaluator import ResearchSkillsEvaluator
 from academic_research_skills.core.feedback import FeedbackGenerator
 from academic_research_skills.core.rubric import ResearchRubric
@@ -46,5 +57,6 @@ __all__ = [
     "DEFAULT_FEEDBACK_VERBOSITY",
     "DEFAULT_MAX_FEEDBACK_ITEMS",
     "DEFAULT_LANGUAGE",
+    "DEFAULT_RUBRIC_SECTION_WEIGHTS",
     "__version__",
 ]
