@@ -17,6 +17,7 @@ Personal fork notes:
 - Added DEFAULT_LANGUAGE = "en" for explicit language tagging in feedback output
 - Added DEFAULT_RUBRIC_SECTION_WEIGHTS for my standard thesis grading breakdown
 - Adjusted literature_review and argument_structure weights to better reflect capstone rubric
+- Added DEFAULT_FEEDBACK_TONE for controlling whether feedback reads as encouraging or neutral
 """
 
 __version__ = "0.1.0"
@@ -35,6 +36,12 @@ DEFAULT_MAX_FEEDBACK_ITEMS = 7
 
 # Explicitly set language to English; useful if multilingual support is added later
 DEFAULT_LANGUAGE = "en"
+
+# Controls the tone of generated feedback messages.
+# "encouraging" prefixes constructive criticism with positive framing, which I find
+# works better for undergrads who get discouraged by blunt feedback.
+# Other options (if supported by FeedbackGenerator): "neutral", "direct"
+DEFAULT_FEEDBACK_TONE = "encouraging"
 
 # Weighting for each thesis section in my standard undergraduate rubric.
 # Reflects the emphasis I place on argument and methodology over formatting.
@@ -60,6 +67,7 @@ __all__ = [
     "DEFAULT_FEEDBACK_VERBOSITY",
     "DEFAULT_MAX_FEEDBACK_ITEMS",
     "DEFAULT_LANGUAGE",
+    "DEFAULT_FEEDBACK_TONE",
     "DEFAULT_RUBRIC_SECTION_WEIGHTS",
     "__version__",
 ]
